@@ -1,16 +1,16 @@
-%define		kdeplasmaver	5.23.3
+%define		kdeplasmaver	5.23.4
 %define		qtver		5.9.0
 %define		kpname		plasma-disks
 %define		kf5ver		5.39.0
 
 Summary:	plasma-disks
 Name:		kp5-%{kpname}
-Version:	5.23.3
+Version:	5.23.4
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	824e0efa35aa26a98a97e30d0d8a7316
+# Source0-md5:	d792a0949023365b7cbe63063cac4d76
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= 5.15.0
 BuildRequires:	Qt5Gui-devel >= 5.15.0
