@@ -1,16 +1,16 @@
-%define		kdeplasmaver	5.23.5
+%define		kdeplasmaver	5.24.0
 %define		qtver		5.9.0
 %define		kpname		plasma-disks
 %define		kf5ver		5.39.0
 
 Summary:	plasma-disks
 Name:		kp5-%{kpname}
-Version:	5.23.5
+Version:	5.24.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	d4a4a7feb3d8e70fe5d3ccdf29c074ca
+# Source0-md5:	c8aa0ccd5cf5b428e16a25410f8ac33f
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= 5.15.0
 BuildRequires:	Qt5Gui-devel >= 5.15.0
@@ -61,13 +61,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kpname}.lang
 %defattr(644,root,root,755)
-%{_libdir}/qt5/plugins/kcms/smart.so
 %{_libdir}/qt5/plugins/kf5/kded/smart.so
 %attr(755,root,root) %{_prefix}/libexec/kauth/kded-smart-helper
 %{_datadir}/dbus-1/system-services/org.kde.kded.smart.service
 %{_datadir}/dbus-1/system.d/org.kde.kded.smart.conf
 %{_datadir}/knotifications5/org.kde.kded.smart.notifyrc
 %{_datadir}/kpackage/kcms/plasma_disks
-%{_datadir}/kservices5/smart.desktop
 %{_datadir}/metainfo/org.kde.plasma.disks.metainfo.xml
 %{_datadir}/polkit-1/actions/org.kde.kded.smart.policy
+%{_libdir}/qt5/plugins/plasma/kcms/kinfocenter/smart.so
